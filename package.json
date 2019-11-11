@@ -7,11 +7,12 @@
     "url": "https://github.com/3s3s/opentrade.git"
   },
   "dependencies": {
-    "express": "latest",
-    "ws": "latest",
-    "sendmail": "latest",
-    "sqlite3": "latest",
+    "cors": "latest",
     "ejs": "latest",
-    "cors": "latest"
+    "express": "latest",
+    "sendmail": "latest",
+    "sqlite": "^3.0.3",
+    "sqlite3": "latest",
+    "ws": "latest"
   }
 }
