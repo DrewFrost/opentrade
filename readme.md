@@ -1,29 +1,29 @@
-# OpenTrade is the best opensource cryptocurrency exchange!
 
-Live version: https://trade.multicoins.org/
-
-
-Step-by-step install instructions:
-
-1. Register on the VPS hosting like this https://m.do.co/c/1ece5d76d5cd
-2. Create "Droplet" Ubuntu 16 x64 / 1GB / 1vCPU / 25 GB SSD
-3. Log in to Droplet over SSH (You will receive a email with IP, username and password)
-4
-
+1. Register on Digital Ocean
+2. Create "Droplet" Ubuntu 18
+3. Log in to Droplet over SSH
 ```
-[sudo] apt-get update
-[sudo] apt-get install build-essential libssl-dev curl -y
-curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh -o install_nvm.sh
+apt-get update
+
+apt-get install build-essential libssl-dev curl -y
+curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.35.0/install.sh -o install_nvm.sh
+
 bash install_nvm.sh
-[sudo] reboot
 
-nvm install 12.6.0
+#enter commands that will appear after installation to link nvm
 
-git clone --recurse-submodules https://github.com/3s3s/opentrade.git
+nvm install 12.6
+```
+
+
+## Now you need to clone repo, install pm2
+```
+git clone --recurse-submodules https://github.com/DrewFrost/opentrade.git
+
 cd opentrade
 
-[sudo] npm install 
-[sudo] npm install -g forever
+npm install -g pm2
+
 ```
 
 ## Here is an example of the file ~/opentrade/server/modules/private_constants.js Edit with your configs.
@@ -44,21 +44,10 @@ exports.walletspassphrase = {
 
 **You MUST change default value exports.password_private_suffix !**
 
-**After, you can run exchange**
+## To run locally run 
+```./deploy.sh ```
 
-```
-cd ~/opentrade/databaseServer
-[sudo] forever start main.js
-cd ~/opentrade/accountsserver
-git checkout master
-[sudo] forever start main.js
-cd  ~/opentrade/server
-[sudo] forever start main.js
-```
-
-In your browser address bar, type https://127.0.0.1
-You will see OpenTrade.
-
+Enter you local ip. <br>
 The first registered user will be exchange administrator. 
 
 # Add trade pairs
