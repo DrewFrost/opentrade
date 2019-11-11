@@ -1,5 +1,8 @@
 #!/bin/bash
+cd ~/opentrade/databaseServer/
+pm2 start main.js -n DB
+cd ~/opentrade/accountsserver/
+pm2 start main.js -n Accounts-Server
+cd ~/opentrade/server/
+pm2 start main.js  -n Server
 
-pm2 reload DB-start --watch
-pm2 reload Account_Server-start --watch
-pm2 reload Server-start --watch
