@@ -1,7 +1,7 @@
 'use strict';
 
-const SUPPORT_EMAIL = 'support@email.com';
-const NOREPLY_EMAIL = 'no-reply@email.com';
+const SUPPORT_EMAIL = 'support@opentrade.drewfrost.xyz';
+const NOREPLY_EMAIL = 'no-reply@opentrade.drewfrost.xyz';
 const DOMAIN = 'localhost';
 
 const MAILER_NAME = 'OpenTrade Mailer';
