@@ -25,8 +25,8 @@ exports.share = {
    TRADE_COMISSION: 0.001, //change trade comission percent
    DUST_VOLUME: 0.000001, //change minimal order volume
    
-   TRADE_MAIN_COIN: "Marycoin",
-   TRADE_MAIN_COIN_TICKER: "MC",
+   TRADE_MAIN_COIN: "Bitcoin",
+   TRADE_MAIN_COIN_TICKER: "BTC",
    TRADE_DEFAULT_PAIR: "Litecoin"
 };
 
